@@ -1,0 +1,95 @@
+#title-hdr {
+  text-align: center;
+  color: #FFF;
+}
+
+#inst-hdr {
+  text-align: center;
+  color: #777;
+}
+
+#start-btn {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.mm-checkbox {
+  float: left;
+}
+
+.mm-btn-label {
+  font-weight: bold;
+}
+
+.lbl-hdr {
+  color: #FFF;
+}
+
+.word-hdr {
+  margin-bottom: 20px;
+}
+
+.q-word {
+  background-color: #FFF;
+  color: #000;
+}
+
+.syn-hdr {
+  color: #666;
+}
+
+.skip-btn {
+  float: right;
+}
+
+.hint-btn {
+  float: left;
+}
+
+.soft-key {
+  width: 15%;
+  margin-left: 0.8%;
+  margin-right: 0.8%;
+  margin-top: 0.8%;
+  margin-bottom: 0.8%;
+  font-weight: bold;
+  background-image: none;
+  background-color: #FFFFFF;
+}
+
+.soft-key:hover {
+  background-image: none;
+  background-color: #DDDDDD;
+}
+.soft-key:focus {
+  background-image: none;
+  background-color: #DDDDDD;
+}
+.soft-key:active {
+  background-image: none;
+  background-color: #CCCCCC;
+}
+
+.focused {
+  background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+  border-color: #28a4c9;
+}
+
+.not-focused {
+  background-image: linear-gradient(to bottom,#444444 0,#222222 100%);
+  border-color: #111111;
+}
+
+.answer-div {
+  margin-bottom: 1em;
+}
+
+.submit-btn {
+  margin-left: 20%;
+  width: 60%;
+  font-weight: bold;
+}
+
+body {
+  background-color: #111;
+}
