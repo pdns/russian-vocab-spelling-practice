@@ -74,9 +74,12 @@ var russContent = [
     ["cake", "торт"],
     ["lesson", "урок"],
     ["in the morning", "утром"],
-    ["cold", "холодно"]
+    ["cold", "холодно"],
+
+    ['What is your name?', 'Как вас зовут?'],
+    ['wait a minute', 'минуту'],
+    ['thank you', 'спасибо'],
   ],
-  //TODO: Geographical Names, Colloquial Expressions
 },
 
 { 'name': "Unit 3 Vocabulary",
@@ -102,7 +105,7 @@ var russContent = [
     ['spoon', 'ложка'],
     ['May (month)', 'май'],
     ['car', 'машина'],
-    ['may', 'можно'],
+    ['may/may I', 'можно'],
     ['mine/my (masc.)', 'мой'],
     ['mine/my (fem.)', 'моя'],
     ['our (masc.)', 'наш'],
@@ -127,9 +130,10 @@ var russContent = [
     ['berry', 'ягода'],
     ['language', 'язык'],
 
-    ['wait a minute', 'минуту'],
-    ['thank you', 'спасибо'],
-    //TODO: Expressions and/or Geographical Names
+    ['Goodbye', 'До свидания'],
+    ['Hello/How do you do? (inf.)', 'Здравствуй'],
+    ['How are you doing?', 'Как дела?'],
+    ['Really?', 'Правда?'],
   ],
 },
 
@@ -219,10 +223,17 @@ var russContent = [
     ["please/you're welcome", 'пожалуйста'],
     ['tell me (inf.)', 'скажи'],
     ['tell me (form.)', 'скажите'],
-    //TODO: Expressions
+    ['What is it?', 'Что это?'],
+    ['Who is it?', 'Кто это?'],
   ],
 },
 
+{ 'name': "In-class Vocabulary",
+  'vocab': [
+    ['door', 'дверь'],
+    ['game', 'игра'],
+  ],
+},
 
 // { 'name': "",
 //   'vocab': [

@@ -148,8 +148,9 @@ function InputSet(props) {
 }
 
 function KeyboardKey(props) {
+  var cla = props.extraClass !== undefined ? props.extraClass : "soft-key";
   return React.createElement("input",
-                             {className: "btn btn-default soft-key",
+                             {className: "btn btn-default " + cla,
                               type: "button",
                               value: props.letter,
                               onClick: props.onKeyPress});
@@ -178,7 +179,7 @@ function ShiftKey(props) {
 function Keyboard(props) {
   //var keysPerRow = [5, 6, 6, 5, 5, 6];
   //var keysPerRow = [5, 6, 6, 5, 5, 3, 3];
-  var keysPerRow = [5, 6, 6, 6, 4, 3, 3];
+  var keysPerRow = [5, 6, 6, 6, 4, 6];
   var keys = [];
   var nextKey = 0;
   var rows = [];
@@ -188,9 +189,16 @@ function Keyboard(props) {
   var shiftKey = React.createElement(ShiftKey,
                                      {onShift: props.onShift,
                                       key: cyrilicAlphabet.length + 1});
+  var spaceKey = React.createElement(KeyboardKey,
+                                     { letter: " ",
+                                       extraClass: "space-key",
+                                       key: cyrilicAlphabet.length + 2,
+                                       onKeyPress: props.onKeyPress});
+  var qMarkKey = React.createElement(KeyboardKey,
+                                     { letter: "?",
+                                       key: cyrilicAlphabet.length + 3,
+                                       onKeyPress: props.onKeyPress});
   for (var index in cyrilicAlphabet) {
-    //var letter = cyrilicAlphabet[index];
-    //var letter = cyrilicAlphabet[index].toUpperCase();
     var letter = (props.uppercase ? 
                  cyrilicAlphabetUpper[index] :
                  cyrilicAlphabet[index])
@@ -202,14 +210,13 @@ function Keyboard(props) {
   for (var i = 0; i < keysPerRow.length; i++) {
     var keysForRow = keys.slice(nextKey, nextKey + keysPerRow[i]);
     if (i === 0) keysForRow.push(bkspKey);
-    if (i === keysPerRow.length - 1) keysForRow.unshift(shiftKey);
     var row = React.createElement("div", {className: "text-center", key: "k" + i}, keysForRow);
-    //var row = React.createElement("div", {className: "text-center", key: "k" + i}, keys.slice(nextKey, nextKey + keysPerRow[i]));
     nextKey += keysPerRow[i];
     rows.push(row);
   }
+  var last_row = React.createElement("div", {className: "text-center", key: "u"}, shiftKey, spaceKey, qMarkKey);
+  rows.push(last_row);
   return React.createElement("div", {className: "panel panel-primary focused"}, rows);
-  //return React.createElement("div", {className: "panel panel-default"}, keys);
 }
 
 function ItemList(props) {
